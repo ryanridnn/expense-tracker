@@ -1,0 +1,168 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing:  border-box;
+	font-family: Poppins, sans-serif;
+}
+
+body{
+	background:  #F7F7F7;
+}
+
+h2, h3, h4{
+	font-weight: 500;
+}
+
+ul li{
+	list-style: none;
+}
+
+button{
+	cursor:  pointer;
+}
+
+.header{
+	padding-bottom: .3rem;
+	border-bottom:  .5px solid #ccc;
+}
+
+.card{
+	width:  400px;
+	margin:  7rem auto 10rem;
+}
+
+.card .balance{
+	margin: 1.5rem 0 ;
+}
+
+.card .balance .balance-header{
+	font-weight:  500;
+}
+
+.card .balance .balance-amount{
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
+.income-expenses{
+	display:  flex;
+	position:  relative;
+	background: #fff;
+	box-shadow: 0px 1.5px 3px rgba(0, 0, 0, .24);
+}
+
+.income-expenses::before{
+	content:  '';
+	position:  absolute;
+	top:  50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width:  2px;
+	height:  60%;
+	background:  #ddd;
+}
+
+.income-expenses > div{
+	flex:  1;
+	display:  flex;
+	flex-direction:  column;
+	justify-content:  center;
+	align-items:  center;
+	padding: 1.3rem 0;
+	font-size:  1.1rem;
+}
+
+.income-expenses h4{
+	text-transform:  uppercase;
+}
+
+.income-expenses .amount{
+	font-size:  1.2rem;
+	font-weight:  500;
+}
+
+.income-expenses .amount.plus{
+	color: #2ecc71;
+}
+
+.income-expenses .amount.minus{
+	color:  #c0392b;
+}
+
+.transaction-history{
+	margin-top:  2rem;
+}
+
+.transaction-list{
+	padding:  1.5rem 0 1rem;
+}
+
+.transaction{
+	display:  flex;
+	position:  relative;
+	justify-content:  space-between;
+	padding:  .8rem 1rem;
+	background:  #fff;
+	box-shadow:  0 1.5px 3px rgba(0, 0, 0, .24);
+}
+
+.transaction:not(:last-child){
+	margin-bottom:  1rem;
+}
+
+.transaction.income{
+	border-right:  7px solid #2ecc71;
+}
+
+.transaction.expense{
+	border-right:  7px solid #c0392b;
+}
+
+.transaction .delete-btn{
+	position:  absolute;
+	top:  50%;
+	left:  0;
+	transform:  translate(-100%, -50%);
+	padding:  .5rem .8rem;
+	background: #e74c3c;
+	color: #fff;
+	border:  none;
+	opacity:  0;
+	transition: .2s ease;
+}
+
+.transaction:hover .delete-btn{
+	opacity:  1;
+}
+
+form.add-transaction-form{
+	padding:  1rem 0;
+}
+
+.input-group{
+	display:  flex;
+	flex-direction:  column;
+}
+
+.input-group{
+	margin-bottom:  1rem;
+}
+
+.input-group label{
+	margin-bottom: .5rem;
+	font-size:  .9rem;
+}
+
+.input-group input{
+	padding:  .5rem 1rem;
+	border: 1px solid #dedede;
+}
+
+.add-transaction-form button.submit-btn{
+	width:  100%;
+	margin-top:  1rem;
+	padding:  .7rem;
+	background:  #9c88ff;
+	color:  white;
+	border: none;
+}
